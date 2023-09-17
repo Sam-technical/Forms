@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        background-color: grey;
+        font-family: arial;
+      }
+      .container {
+        background-color: white;
+        position: relative;
+        left: 24%;
+        top: 40px;
+        height: 76vh;
+        width: 50%;
+        border-radius: 10px;
+        padding: 8px 20px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+
+      .pad {
+        padding: 4px 60px 4px 4px;
+        border-radius: 3px;
+        border: 1px solid gray;
+        margin: 4px;
+      }
+
+      .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 20px;
+      }
+
+      .address {
+        grid-column: 1/-1;
+      }
+
+      .btn {
+        position: relative;
+        left: 84%;
+        top: 14px;
+        padding: 10px;
+        background-color: red;
+        display: inline;
+        border-radius: 24px;
+        border: 1px solid transparent;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+      }
+
+      #gap {
+        /* margin-right: 60px; */
+        padding-right: 120px;
+      }
+
+
+     
+
+      @media (max-width:700px){
+        div{
+          grid-column-start: 1;
+          grid-column-end: -1;
+
+          .container{
+            width: auto;
+          }
+
+          
+        }
+      }
+      @media (max-width:700px){
+        .pad{
+          padding-right: 10%;
+          
+          .container{
+            height: 100%;
+          }
+         
+        }
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items">
+        <div class="application">
+          <h1>Job Application<span> (Web)</span></h1>
+        </div>
+      </div>
+
+      <div class="form">
+        <div class="first-name">
+          <label for="first-name">First Name</label><br />
+          <input
+            class="pad"
+            type="text"
+            id="first-name"
+            placeholder="Enter First Name"
+          />
+        </div>
+
+        <div class="first-name">
+          <label for="first-name">Last Name</label><br />
+          <input
+            class="pad"
+            type="text"
+            id="first-name"
+            placeholder="Enter Last Name"
+          />
+        </div>
+
+        <div class="first-name">
+          <label for="first-name">E-mail</label><br />
+          <input
+            class="pad"
+            type="email"
+            id="first-name"
+            placeholder="Enter Email"
+          />
+        </div>
+
+        <div class="select">
+          <label for="">Select Job</label><br />
+          <select class="pad">
+            <option value="Select job role">Select job role</option>
+            <option value="Frontened Developer">Frontened Developer</option>
+            <option value="Backened Developer">Backened Developer</option>
+            <option value="Full-Stack Developer">Full-Stack Developer</option>
+            <option value="Ux-Ui Designer">Ux-Ui Designer</option>
+          </select>
+        </div>
+
+        <div class="address">
+          <label for="address">Address</label><br />
+          <textarea placeholder="Enter Address" cols="80" rows="4"></textarea>
+        </div>
+
+        <div class="city">
+          <label for="first-name">City</label><br />
+          <input class="pad" type="text" id="city" placeholder="Enter City" />
+        </div>
+
+        <div class="pincode">
+          <label for="first-name">Pincode</label><br />
+          <input
+            class="pad"
+            type="number"
+            id="pincode"
+            placeholder="Enter Pincode"
+          />
+        </div>
+
+        <div class="date">
+          <label for="date">Date</label><br />
+          <input
+            class="pad"
+            id="gap"
+            value="2022-01-10"
+            type="date"
+            id="date"
+            name="date"
+          />
+        </div>
+
+        <div class="first-name">
+          <label for="first-name">Upload Your cv</label><br />
+          <input
+            class="pad"
+            type="file"
+            id="first-name"
+            placeholder="Enter First Name"
+          />
+        </div>
+      </div>
+      <div class="btne">
+        <button class="btn">Apply Now</button>
+      </div>
+    </div>
+  </body>
+</html>
